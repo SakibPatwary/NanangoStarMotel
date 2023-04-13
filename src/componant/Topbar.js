@@ -8,7 +8,7 @@ import {
 
 const Topbar = () => {
   return (
-    <Navbar className="navbar navbar-dark bg-primary" expand="lg">
+    <Navbar className="navbar navbar-dark bg-primary fixed-top" expand="lg">
       <Container>
 
         <Navbar.Brand>
@@ -16,15 +16,18 @@ const Topbar = () => {
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="#action1">HOME</Nav.Link>
-            <Nav.Link href="#action2">ROOMS</Nav.Link>
+          <Nav className="me-auto my-2 my-lg-0 align-items-center" navbarScroll>
+            <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/rooms">ROOMS</Nav.Link>
             <Nav.Link href="#action3">FAQ</Nav.Link>
             <Nav.Link href="#action4">LOCAL AREA</Nav.Link>
             <Nav.Link href="#action5">FACILITIES</Nav.Link>
             <Nav.Link href="#action6">CONTACT US</Nav.Link>
           </Nav>
-          <Button variant="danger">Book Now</Button>
+
+          <div className="text-center">
+            <Button className="mx-auto" variant="danger">Book Now</Button>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
