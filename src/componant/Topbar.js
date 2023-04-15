@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
 import {
   Container,
   Navbar,
@@ -11,9 +12,12 @@ const Topbar = () => {
     <Navbar className="navbar navbar-dark bg-primary fixed-top" expand="lg">
       <Container>
 
+        <LinkContainer to="/">
         <Navbar.Brand>
           <img style={{ maxWidth: "100px" }} src="/img/logo.png"></img>
           </Navbar.Brand>
+        </LinkContainer>
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 align-items-center" navbarScroll>

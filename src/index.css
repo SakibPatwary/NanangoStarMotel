@@ -6,3 +6,7 @@ main {
   min-height: 52vh;
 
 }
+
+.cursorAll {
+  cursor: pointer;
+}
