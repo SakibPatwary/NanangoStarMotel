@@ -92,8 +92,8 @@ const Gallery = ({device}) => {
 
             </Row>
             <Row className="py-2 px-2">
-                <LinkContainer to="/">
-                    <Button variant="primary" size="sm" className="rounded">
+                <LinkContainer to="/gallery">
+                    <Button variant="secondary" size="sm" className="rounded">
                         <b>View All Images</b>
                     </Button>
                 </LinkContainer>

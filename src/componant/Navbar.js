@@ -4,12 +4,10 @@ import { Card, Row, Col, Form, Container, Button } from "react-bootstrap";
 const Home = () => {
   return (
     <Container>
-
-      {/* Navbar */}
         <div
           style={{
             minHeight: '70vh',
-          backgroundImage: 'url("https://media.cntraveler.com/photos/5ad7814da7bf5433095d6490/16:9/w_2560,c_limit/Austin-Motel---Exteriors---Nick-Simonite.jpg")',
+          backgroundImage: 'url("./img/navbar.jpeg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -22,14 +20,14 @@ const Home = () => {
             <div className="py-4 px-2" >
               <Row>
                 <Col xs={12} sm={12} md={6} lg={3} className="pb-2 cursorAll">
-                  <Form.Label>Select Check in Date</Form.Label>
+                  <Form.Label>Check in Date</Form.Label>
                   <Form.Control
                     type="date"
                     placeholder="Check in Date"
                   />
                 </Col>
               <Col xs={12} sm={12} md={6} lg={3} className="pb-2">
-                <Form.Label>Select Check out Date</Form.Label>
+                <Form.Label>Check out Date</Form.Label>
                 <Form.Control
                   type="date"
                   placeholder="Check Out Date"

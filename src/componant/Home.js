@@ -3,15 +3,18 @@ import Navbar from './Navbar'
 import Map from './Map'
 import Features from './Features'
 import Gallery from './Gallery'
+import Services from './Services'
+import Place from './Place'
 
 const Home = () => {
   return (
     <>
     <Navbar/>
     <Features/>
-    <Gallery/>
+    <Services/>
+    <Place/>
+    <Gallery />
     <Map/>
-
     </>
   )
 }

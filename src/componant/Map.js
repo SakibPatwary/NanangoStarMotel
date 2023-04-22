@@ -4,7 +4,14 @@ import { Container } from "react-bootstrap";
 const Map = () => {
   return (
     <Container>
-          <div className="py-2">
+      <h2
+        className="text-center py-2"
+        style={{ backgroundColor: "#3459e6", color: "white" }}
+      >
+        Get Direction from Map
+      </h2>
+
+          <div>
               <div style={{ width: "100%" }}>
                   <iframe
                       width="100%"

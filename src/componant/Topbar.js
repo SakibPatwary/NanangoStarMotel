@@ -1,36 +1,47 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Button,
-} from "react-bootstrap";
+import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
 const Topbar = () => {
   return (
     <Navbar className="navbar navbar-dark bg-primary fixed-top" expand="lg">
       <Container>
-
         <LinkContainer to="/">
-        <Navbar.Brand>
-          <img style={{ maxWidth: "100px" }} src="/img/logo.png"></img>
+          <Navbar.Brand>
+            <img style={{ maxWidth: "100px" }} src="/img/logo.png"></img>
           </Navbar.Brand>
         </LinkContainer>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 align-items-center" navbarScroll>
-            <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="/rooms">ROOMS</Nav.Link>
-            <Nav.Link href="#action3">FAQ</Nav.Link>
-            <Nav.Link href="#action4">LOCAL AREA</Nav.Link>
-            <Nav.Link href="#action5">FACILITIES</Nav.Link>
-            <Nav.Link href="#action6">CONTACT US</Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link>HOME</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/rooms">
+              <Nav.Link>ROOMS</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/facilities">
+              <Nav.Link>FACILITIES</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/places">
+              <Nav.Link>LOCAL AREA</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/gallery">
+              <Nav.Link>GALLERY</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/FAQ">
+              <Nav.Link>FAQ</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/contact">
+              <Nav.Link>CONTACT US</Nav.Link>
+            </LinkContainer>
           </Nav>
 
           <div className="text-center">
-            <Button className="mx-auto" variant="danger">Book Now</Button>
+            <Button className="mx-auto" variant="danger">
+              Book Now
+            </Button>
           </div>
         </Navbar.Collapse>
       </Container>

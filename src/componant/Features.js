@@ -11,37 +11,29 @@ const Features = () => {
                 Features
             </h2>
             <Row>
-                <Col xs={12} md={6} lg={4} className='pb-2'>
-                    <Card className="bg-dark text-white">
-                        <Card.Img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="Card image" />
-                        <Card.ImgOverlay>
+                <Col xs={12} md={12} lg={4} className='pb-2'>
+                    <Card className="bg-dark text-white py-4 px-2 text-center" style={{minHeight:'180px'}}>
                             <Card.Title >Accommodation</Card.Title>
-                            <Card.Text>
-                                The Nanango Star Motel offers a range of accommodation options to suit different guests' needs, from standard single rooms to larger family rooms. All rooms come equipped with air conditioning, free Wi-Fi, and flat-screen TVs with cable channels.
+                            <Card.Text style={{textAlign:'justify'}}>
+                                The Nanango Star Motel offers a range of accommodation options to suit different guests' needs, from standard single rooms to larger family rooms.
                             </Card.Text>
-                        </Card.ImgOverlay>
                     </Card>
                 </Col>
-                <Col xs={12} md={6} lg={4} className='pb-2'>
-                    <Card className="bg-dark text-white">
-                        <Card.Img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="Card image" />
-                        <Card.ImgOverlay>
+                <Col xs={12} md={12} lg={4} className='pb-2'>
+                    <Card className="bg-dark text-white py-4 px-2 text-center" style={{ minHeight: '180px' }}>
                             <Card.Title >On-site Parking</Card.Title>
-                            <Card.Text>
+                        <Card.Text style={{ textAlign: 'justify' }}>
                                 The motel provides ample on-site parking space, making it convenient for guests to park their vehicles.
                             </Card.Text>
-                        </Card.ImgOverlay>
+
                     </Card>
                 </Col>
-                <Col xs={12} md={6} lg={4}>
-                    <Card className="bg-dark text-white">
-                        <Card.Img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="Card image" />
-                        <Card.ImgOverlay>
+                <Col xs={12} md={12} lg={4}>
+                    <Card className="bg-dark text-white  py-4 px-2 text-center" style={{ minHeight: '180px' }}>
                             <Card.Title >24-Hour Reception</Card.Title>
-                            <Card.Text>
+                        <Card.Text style={{ textAlign: 'justify' }}>
                                 The motel has a 24-hour reception desk, allowing guests to check in or check out at any time of the day or night.
                             </Card.Text>
-                        </Card.ImgOverlay>
                     </Card>
                 </Col>
             </Row>
