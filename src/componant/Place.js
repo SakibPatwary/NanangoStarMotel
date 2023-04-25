@@ -31,17 +31,17 @@ const places = [
 
 const Place = () => {
   return (
-    <Container className="my-4">
+    <Container className="my-4 pb-3">
       <h2
         className="text-center py-2"
-        style={{ backgroundColor: "#3459e6", color: "white" }}
+        style={{ backgroundColor: "#5A9BF1"}}
       >
-        Things To Do in Nanango
+        THINGS TO DO IN NANANGO
       </h2>
       <Row>
         {places.map((place) => (
-          <Col xs={12} md={6} lg={3} className='pb-3'>
-            <Card className="bg-light text-black text-center shadow" style={{ minHeight: '360px' }}>
+          <Col xs={12} md={6} lg={3} className='pb-2'>
+            <Card className="text-black text-center shadow" style={{ minHeight: '380px', backgroundColor: '#d1cfcf' }}>
               <Card.Img
                 className='p-2'
                 style={{ borderRadius: '15px' }}
@@ -52,13 +52,16 @@ const Place = () => {
           </Col>
         ))}
       </Row>
-      <Row className="py-2 px-2">
+
+      <Container>
+      <Row>
         <LinkContainer to="/places">
-          <Button variant="secondary" size="sm" className="rounded">
+          <Button variant="dark" size="sm" className="rounded">
             <b>View All Popular Places</b>
           </Button>
         </LinkContainer>
       </Row>
+      </Container>
     </Container>
   )
 }

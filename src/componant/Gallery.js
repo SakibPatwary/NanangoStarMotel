@@ -2,6 +2,7 @@ import {React, useEffect, useState, useCallback} from "react";
 import { Container, Row, Button, Col, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import ImageViewer from "react-simple-image-viewer";
+import { motion } from "framer-motion";
 
 const images = [
     {
@@ -55,16 +56,20 @@ const Gallery = ({device}) => {
 
 
     return (
-        <Container className="my-4">
+        <Container className="my-4 pb-3">
             <h2
                 className="text-center py-2"
-                style={{ backgroundColor: "#3459e6", color: "white" }}
+                style={{ backgroundColor: "#5A9BF1" }}
             >
-                Image Gallery
+                IMAGE GALLERY
             </h2>
             <Row>
                 {images.map((img, index) => (
-                    <Col lg={3} md={3} sm={6} xs={6}  className="p-2">
+                    <Col lg={3} md={3} sm={6} xs={6}  className="pb-2">
+                        <motion.div
+                            whileHover={{ scale: 1.04 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
                         <Card className="rounded-4 cursorAll">
                             <Card.Img
                                 className="img-fluid"
@@ -74,6 +79,7 @@ const Gallery = ({device}) => {
                                 key={index}
                             />
                         </Card>
+                        </motion.div>
                     </Col>
                 ))}
 
@@ -91,13 +97,15 @@ const Gallery = ({device}) => {
                 )}
 
             </Row>
-            <Row className="py-2 px-2">
+            <Container>
+            <Row>
                 <LinkContainer to="/gallery">
-                    <Button variant="secondary" size="sm" className="rounded">
+                    <Button variant="dark" size="sm" className="rounded">
                         <b>View All Images</b>
                     </Button>
                 </LinkContainer>
             </Row>
+            </Container>
         </Container>
     );
 };

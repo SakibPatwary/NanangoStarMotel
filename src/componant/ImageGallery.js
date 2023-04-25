@@ -2,6 +2,7 @@ import { React, useEffect, useState, useCallback } from "react";
 import { Container, Row, Button, Col, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import ImageViewer from "react-simple-image-viewer";
+import { motion } from "framer-motion";
 
 const images = [
     {
@@ -125,13 +126,17 @@ const ImageGallery = ({device}) => {
       (
       <Container className="my-4 mt-5 pt-5">
           <h1
-              className="text-center py-2"
+              className="text-center py-2 pt-3"
           >
               Images of Nanango Star Motel
           </h1>
           <Row>
               {images.map((img, index) => (
                   <Col lg={3} md={3} sm={6} xs={6} className="p-2">
+                      <motion.div
+                          whileHover={{ scale: 1.04 }}
+                          whileTap={{ scale: 0.9 }}
+                      >
                       <Card className="rounded-4 cursorAll">
                           <Card.Img
                               className="img-fluid"
@@ -141,6 +146,7 @@ const ImageGallery = ({device}) => {
                               key={index}
                           />
                       </Card>
+                      </motion.div>
                   </Col>
               ))}
 

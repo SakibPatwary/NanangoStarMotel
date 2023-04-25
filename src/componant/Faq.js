@@ -4,8 +4,8 @@ import { Container, Accordion,Row,Col, Card,Form,Button} from 'react-bootstrap'
 const Faq = () => {
   return (
       <Container className="my-4 mt-5 pt-5">
-        <Row>
-            <Col xs={12} sm={12} md={6} xl={6}>
+          <Row className="mt-4">
+            <Col xs={12} sm={12} md={7} xl={7}>
                   <h3
                       className="text-center py-2"
                       style={{ backgroundColor: "grey", color: "white" }}
@@ -51,7 +51,7 @@ const Faq = () => {
                       </Accordion.Item>
                   </Accordion>
             </Col>
-              <Col xs={12} sm={12} md={6} xl={6}>
+              <Col xs={12} sm={12} md={5} xl={5}>
                   <h2
                       className="text-center py-2"
                       style={{ backgroundColor: "grey", color: "white" }}

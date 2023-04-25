@@ -6,7 +6,6 @@ import Home from './componant/Home.js';
 import Rooms from './componant/Rooms';
 import ImageGallery from './componant/ImageGallery';
 import Places from './componant/Places';
-import Facility from './componant/Facility';
 import Contact from './componant/Contact';
 import Faq from './componant/Faq';
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/rooms" element={<Rooms/>}/>
           <Route path='/gallery' element={<ImageGallery/>}/>
           <Route path='/places' element={<Places/>} />
-          <Route path='/facilities' element={<Facility/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/FAQ' element={<Faq/>}/>
         </Routes>

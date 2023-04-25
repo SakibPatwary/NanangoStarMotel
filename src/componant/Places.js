@@ -84,14 +84,14 @@ const Places = () => {
       (
       <Container className="my-4 mt-5 pt-5">
           <h1
-              className="text-center py-2"
+              className="text-center py-2 pt-3"
           >
               Popular Places in Nanango
           </h1>
           <Row>
               {places.map((place) => (
                   <Col xs={12} md={4} lg={3} className='pb-3'>
-                      <Card className="bg-light text-black text-center" style={{minHeight:'430px'}}>
+                      <Card className="text-black text-center" style={{ minHeight: '430px', backgroundColor: '#d1cfcf' }}>
                           <Card.Img
                           className='p-2'
                               style={{borderRadius: '15px' }}

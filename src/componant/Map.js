@@ -6,9 +6,9 @@ const Map = () => {
     <Container>
       <h2
         className="text-center py-2"
-        style={{ backgroundColor: "#3459e6", color: "white" }}
+        style={{ backgroundColor: "#5A9BF1"}}
       >
-        Get Direction from Map
+        DIRECTION ON MAP
       </h2>
 
           <div>

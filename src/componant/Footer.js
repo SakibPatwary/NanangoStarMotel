@@ -65,9 +65,9 @@ const Footer = () => {
 
         // </>
 
-        <div style={{ backgroundColor: '#3459e6' }}>
+        <div style={{ backgroundColor: '#5A9BF1' }}>
             <Container>
-                <Row className='d-flex text-center align-items-center py-5' style={{ color: 'white' }}>
+                <Row className='d-flex text-center align-items-center py-5' style={{ color: 'black',fontWeight:'bold' }}>
                     <Col lg={4} md={4} sm={12} className='pb-5'>
 
                         <FaPhoneAlt size='40' /><br /><br />
@@ -85,7 +85,7 @@ const Footer = () => {
 
                 </Row>
                 <Row>
-                    <Col className="d-flex justify-content-center mb-4" style={{ color: '#adb5bd' }}>
+                    <Col className="d-flex justify-content-center mb-4" style={{ color: 'white' }}>
                         Copyright &copy; NANANGO STAR MOTEL
                     </Col>
                 </Row>

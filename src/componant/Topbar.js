@@ -4,7 +4,7 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
 const Topbar = () => {
   return (
-    <Navbar className="navbar navbar-dark bg-primary fixed-top" expand="lg">
+    <Navbar className="navbar navbar-dark fixed-top" expand="lg" style={{ backgroundColor:'#5A9BF1'}}>
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
@@ -21,9 +21,6 @@ const Topbar = () => {
             <LinkContainer to="/rooms">
               <Nav.Link>ROOMS</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/facilities">
-              <Nav.Link>FACILITIES</Nav.Link>
-            </LinkContainer>
             <LinkContainer to="/places">
               <Nav.Link>LOCAL AREA</Nav.Link>
             </LinkContainer>
@@ -39,9 +36,11 @@ const Topbar = () => {
           </Nav>
 
           <div className="text-center">
-            <Button className="mx-auto" variant="danger">
-              Book Now
-            </Button>
+            <a href="https://hotels.cloudbeds.com/reservation/spR72T" target="_blank" rel="noopener noreferrer">
+              <Button className="mx-auto" variant="danger">
+                Book Now
+              </Button>
+            </a>
           </div>
         </Navbar.Collapse>
       </Container>
