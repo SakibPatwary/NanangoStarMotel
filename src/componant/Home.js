@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import Map from './Map'
 import Features from './Features'
@@ -10,13 +10,14 @@ import Feedback from './Feedback'
 const Home = () => {
   return (
     <>
-    <Navbar/>
-    <Features/>
-    {/* <Services/> */}
-    <Place/>
-    <Gallery />
-    <Feedback/>
-    <Map/>
+
+      <Navbar />
+      <Features />
+      {/* <Services/> */}
+      <Place />
+      <Gallery />
+      <Feedback />
+      <Map />
     </>
   )
 }

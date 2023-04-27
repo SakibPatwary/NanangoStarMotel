@@ -11,7 +11,7 @@ const Features = () => {
                 FEATURES
             </h2>
             <Row>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor:'#d1cfcf'}}>
                             <Card.Title >Accommodation</Card.Title>
                             <Card.Text style={{textAlign:'justify'}}>
@@ -19,7 +19,7 @@ const Features = () => {
                             </Card.Text>
                     </Card>
                 </Col>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                             <Card.Title >On-site Parking</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>
@@ -28,7 +28,7 @@ const Features = () => {
 
                     </Card>
                 </Col>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                             <Card.Title >24-Hour Reception</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>
@@ -36,7 +36,7 @@ const Features = () => {
                             </Card.Text>
                     </Card>
                 </Col>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                         <Card.Title >Free Wi-Fi</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>
@@ -44,7 +44,7 @@ const Features = () => {
                         </Card.Text>
                     </Card>
                 </Col>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                         <Card.Title >Housekeeping Service</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>
@@ -52,7 +52,7 @@ const Features = () => {
                         </Card.Text>
                     </Card>
                 </Col>
-                <Col xs={12} md={12} lg={4} className='pb-3'>
+                <Col xs={12} md={6} lg={4} className='pb-3'>
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                         <Card.Title >Laundry facilities</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>

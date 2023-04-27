@@ -5,13 +5,14 @@ import {
     Col,
     Card,
 } from "react-bootstrap";
+import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 
 
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 4,
+        items: 3,
         slidesToSlide: 1,
     },
     tablet: {
@@ -29,55 +30,61 @@ const responsive = {
 const reviews = [
     {
         id: 1,
-        placeInfo: 'This beautiful historical homestead has been preserved and restored over the years and is open for tours.'
+        placeInfo: 'The motel was clean and comfortable, with a great location.'
     },
     {
         id: 2,
-        placeInfo: 'Pioneer Park features a variety of heritage buildings and displays that showcase the towns history and culture.'
+        placeInfo: 'We had a great stay at this motel. The staff were friendly and helpful.'
     },
     {
         id: 3,
-        placeInfo: 'The park features several walking trails that offer stunning views of the surrounding countryside.'
+        placeInfo: 'The room was spacious and well-appointed. We enjoyed our stay.'
     },
     {
         id: 4,
-        placeInfo: 'Nanango is situated within the South Burnett Wine Region, which boasts several vineyards and wineries where you can taste some of the regions finest wines.'
+        placeInfo: 'This motel exceeded our expectations. The amenities were fantastic.'
     },
     {
         id: 5,
-        placeInfo: 'Held on the first Saturday of every month, the Nanango Country Markets offer a range of local produce, crafts, and entertainment.'
+        placeInfo: 'Our stay at this motel was wonderful. The bed was comfortable and the room was clean.'
     },
     {
         id: 6,
-        placeInfo: 'The Nanango Showgrounds are home to several events throughout the year, including the Nanango Show, which features a range of competitions and displays.'
-    },
+        placeInfo: 'We were impressed by the quality of service at this motel. Highly recommended.'
+    }, 
 ]
 
 
-    const Feedback = (deviceType) => {
-  return (
-      <Container className="my-5">
-          <h1 className="text-center mb-3">Smart Offers</h1>
-          <Carousel
-              responsive={responsive}
-              transitionDuration={500}
-              autoPlay={deviceType !== "mobile" ? true : false}
-              autoPlaySpeed={2000}
-              deviceType={deviceType}
-              infinite={true}
-              ssr={true}
-              removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-          >
-              {reviews.map((review) => (
-                  <Col lg={3} md={3} sm={12} style={{ height: "100%", width: "100%" }}>
-                          <Card className="cursorAll rounded-4">
-                              <Card.Text>{review.placeInfo}</Card.Text>
-                          </Card>
-                  </Col>
-              ))}
-          </Carousel>
-      </Container>
-  )
+const Feedback = (deviceType) => {
+    return (
+        <Container className='pb-4'>
+            <h2
+                className="text-center py-2"
+                style={{ backgroundColor: "#5A9BF1" }}
+            >
+                CLIENTS FEEDBACK
+            </h2> 
+
+            <Carousel
+                responsive={responsive}
+                transitionDuration={500}
+                autoPlay={deviceType !== "mobile" ? true : false}
+                autoPlaySpeed={2000}
+                deviceType={deviceType}
+                infinite={true}
+                ssr={true}
+                removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+            >
+                {reviews.map((review) => (
+                    <Col className='px-2'>
+                        <Card className="cursorAll rounded-4" style={{ minHeight: '100px', backgroundColor: '#d1cfcf' }}>
+                            <Card.Text className='py-3 px-2 d-flex justify-content-center align-items-center' style={{textAlign:'justify'}}>{review.placeInfo}</Card.Text>
+                        </Card>
+                    </Col>
+                ))}
+            </Carousel>
+        </Container>
+    )
 }
 
 export default Feedback;

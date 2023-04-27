@@ -4,11 +4,11 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
 const Topbar = () => {
   return (
-    <Navbar className="navbar navbar-dark fixed-top" expand="lg" style={{ backgroundColor:'#5A9BF1'}}>
+    <Navbar collapseOnSelect className="navbar navbar-dark fixed-top" expand="lg" style={{ backgroundColor:'#5A9BF1'}}>
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img style={{ maxWidth: "100px" }} src="/img/logo.png"></img>
+            <img style={{ maxWidth: "100px" }} src="/img/logo.png" alt='logo'></img>
           </Navbar.Brand>
         </LinkContainer>
 

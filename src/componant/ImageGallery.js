@@ -1,6 +1,5 @@
 import { React, useEffect, useState, useCallback } from "react";
 import { Container, Row, Button, Col, Card } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import ImageViewer from "react-simple-image-viewer";
 import { motion } from "framer-motion";
 
