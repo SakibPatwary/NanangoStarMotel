@@ -70,7 +70,7 @@ const Navbar = () => {
                 onClick={(e) => {
                   if (!checkInDate || !checkoutDate) {
                     e.preventDefault()
-                    toast.error('Please fill all the fields required', {
+                    toast.error('Please Select Date', {
                       position: 'top-center',
                     })
                   }
