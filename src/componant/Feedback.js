@@ -1,7 +1,6 @@
 import React from 'react'
 import {
     Container,
-    Row,
     Col,
     Card,
 } from "react-bootstrap";
@@ -69,7 +68,7 @@ const Feedback = (deviceType) => {
                 responsive={responsive}
                 transitionDuration={500}
                 autoPlay={deviceType !== "mobile" ? true : false}
-                autoPlaySpeed={2000}
+                autoPlaySpeed={5000}
                 deviceType={deviceType}
                 infinite={true}
                 ssr={true}

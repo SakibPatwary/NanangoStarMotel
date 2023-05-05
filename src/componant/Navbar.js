@@ -16,7 +16,7 @@ const Navbar = () => {
         style={{
           minHeight: '70vh',
           backgroundImage: 'url("./img/navbar.jpeg")',
-          backgroundSize: 'cover',
+          backgroundSize: "cover",
           backgroundPosition: 'center',
         }}
         className='d-flex justify-content-center align-items-end pb-5'
@@ -25,8 +25,8 @@ const Navbar = () => {
           <Card.Header>
             CHECK ROOM AVAILABILITY
           </Card.Header>
-          <div className="py-4 px-2" >
-            <Row>
+          <div className="px-2" >
+            <Row className="mt-2">
               <Col xs={12} sm={12} md={6} lg={6} className="pb-2 cursorAll">
                 <Form.Label>Check in Date</Form.Label>
                 <Form.Control
@@ -58,7 +58,7 @@ const Navbar = () => {
                   <Form.Control type="number"/>
                 </Col> */}
             </Row>
-            <Row className="px-3 mt-3">
+            <Row className="mt-2 pb-2">
               <a style={{ textDecoration: 'none' }}
 
                 href={`https://hotels.cloudbeds.com/reservation/spR72T#checkin=${Moment(
