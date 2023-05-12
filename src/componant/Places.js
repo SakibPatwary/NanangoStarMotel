@@ -1,12 +1,13 @@
 import { React, useEffect } from "react";
 import { Card, Container, Row, Col } from 'react-bootstrap';
+import { motion } from "framer-motion";
 
-const places=[
+const places = [
     {
-        id:1,
-        imageSrc:'./img/places/1.png',
-        placeName:'Visit Ringsfield House',
-        placeInfo:'This beautiful historical homestead has been preserved and restored over the years and is open for tours.'
+        id: 1,
+        imageSrc: './img/places/1.png',
+        placeName: 'Visit Ringsfield House',
+        placeInfo: 'This beautiful historical homestead has been preserved and restored over the years and is open for tours.'
     },
     {
         id: 2,
@@ -77,34 +78,39 @@ const places=[
 ]
 
 const Places = () => {
-  return (
-      useEffect(() => {
-          window.scrollTo(0, 0);
-      }, []),
-      (
-      <Container className="my-4 mt-5 pt-5">
-          <h1
-              className="text-center py-2 pt-3"
-          >
-              Popular Places in Nanango
-          </h1>
-          <Row>
-              {places.map((place) => (
-                  <Col xs={12} md={4} lg={3} className='pb-3'>
-                      <Card className="text-black text-center" style={{ minHeight: '430px', backgroundColor: '#d1cfcf' }}>
-                          <Card.Img
-                          className='p-2'
-                              style={{borderRadius: '15px' }}
-                              src={place.imageSrc} />
-                          <Card.Title className='py-2 px-2'>{place.placeName}</Card.Title>
-                          <Card.Text className='px-2' style={{textAlign:'justify'}}>{place.placeInfo}</Card.Text>
-                      </Card>
-                  </Col>
-              ))}
-          </Row>
-      </Container>
-      )
-  )
+    return (
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []),
+        (
+            <Container className="my-4 mt-5 pt-5">
+                <h1
+                    className="text-center py-2 pt-3"
+                >
+                    Popular Places in Nanango
+                </h1>
+                <Row>
+                    {places.map((place) => (
+
+                        <Col xs={12} md={4} lg={3} className='pb-3'>
+                            <motion.div
+                                whileHover={{ scale: 1.02 }}
+                            >
+                                <Card className="text-black text-center" style={{ minHeight: '430px', backgroundColor: '#d1cfcf' }}>
+                                    <Card.Img
+                                        className='p-2'
+                                        style={{ borderRadius: '15px' }}
+                                        src={place.imageSrc} />
+                                    <Card.Title className='py-2 px-2'>{place.placeName}</Card.Title>
+                                    <Card.Text className='px-2' style={{ textAlign: 'justify' }}>{place.placeInfo}</Card.Text>
+                                </Card></motion.div>
+                        </Col>
+
+                    ))}
+                </Row>
+            </Container>
+        )
+    )
 }
 
 export default Places

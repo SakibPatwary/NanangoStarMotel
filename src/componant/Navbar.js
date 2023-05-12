@@ -14,10 +14,10 @@ const Navbar = () => {
     <Container>
       <div
         style={{
-          minHeight: '70vh',
-          backgroundImage: 'url("./img/navbar.jpeg")',
+          minHeight: '75vh',
+          backgroundImage: 'url("./img/navbar.jpg")',
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: 'right',
         }}
         className='d-flex justify-content-center align-items-end pb-5'
       >
@@ -45,18 +45,6 @@ const Navbar = () => {
                   onChange={(e) => setCheckoutDate(e.target.value)}
                 />
               </Col>
-              {/* <Col xs={4} sm={4} md={4} lg={2} className="pb-2">
-                  <Form.Label>Nights</Form.Label>
-                  <Form.Control type="number" />
-                </Col>
-              <Col xs={4} sm={4} md={4} lg={2} className="pb-2">
-                  <Form.Label>Adults</Form.Label>
-                  <Form.Control type="number" />
-                </Col>
-              <Col xs={4} sm={4} md={4} lg={2} className="pb-2">
-                  <Form.Label>Children</Form.Label>
-                  <Form.Control type="number"/>
-                </Col> */}
             </Row>
             <Row className="mt-2 pb-2">
               <a style={{ textDecoration: 'none' }}
@@ -65,7 +53,7 @@ const Navbar = () => {
                   checkInDate
                 ).format('YYYY-MM-DD')}&checkout=${Moment(
                   checkoutDate
-                ).format('YYYY-MM-DD')}`}
+                ).format('YYYY-MM-DD')}`} target="blank"
 
                 onClick={(e) => {
                   if (!checkInDate || !checkoutDate) {

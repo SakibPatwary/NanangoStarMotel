@@ -7,35 +7,35 @@ import { motion } from "framer-motion";
 const images = [
     {
         id: 1,
-        imageSrc: "./img/gallery/1.jpg",
+        imageSrc: "./img/gallery/6.png",
     },
     {
         id: 2,
-        imageSrc: "./img/gallery/2.jpg",
+        imageSrc: "./img/gallery/7.png",
     },
     {
         id: 3,
-        imageSrc: "./img/gallery/3.jpg",
+        imageSrc: "./img/gallery/5.png",
     },
     {
         id: 4,
-        imageSrc: "./img/gallery/4.jpg",
+        imageSrc: "./img/gallery/8.png",
     },
     {
         id: 5,
-        imageSrc: "./img/gallery/5.jpg",
+        imageSrc: "./img/gallery/2.png",
     },
     {
         id: 6,
-        imageSrc: "./img/gallery/6.jpg",
+        imageSrc: "./img/gallery/3.png",
     },
     {
         id: 7,
-        imageSrc: "./img/gallery/7.jpg",
+        imageSrc: "./img/gallery/1.png",
     },
     {
         id: 8,
-        imageSrc: "./img/gallery/8.jpg",
+        imageSrc: "./img/gallery/4.png",
     },
 ];
 
@@ -56,7 +56,7 @@ const Gallery = ({device}) => {
 
 
     return (
-        <Container className="my-4 pb-3">
+        <Container className="my-4 pb-2">
             <h2
                 className="text-center py-2"
                 style={{ backgroundColor: "#5A9BF1" }}
@@ -65,7 +65,7 @@ const Gallery = ({device}) => {
             </h2>
             <Row>
                 {images.map((img, index) => (
-                    <Col lg={3} md={3} sm={6} xs={6}  className="pb-2">
+                    <Col lg={3} md={4} sm={6} xs={6}  className="pb-2">
                         <motion.div
                             whileHover={{ scale: 1.04 }}
                             whileTap={{ scale: 0.9 }}
@@ -73,7 +73,7 @@ const Gallery = ({device}) => {
                         <Card className="rounded-4 cursorAll">
                             <Card.Img
                                 className="img-fluid"
-                                style={{ borderRadius: "10px" }}
+                                style={{ borderRadius: "10px", objectFit:'cover'}}
                                 src={img.imageSrc}
                                 onClick={() => openImageViewer(index)}
                                 key={index}
@@ -85,6 +85,7 @@ const Gallery = ({device}) => {
 
                 {isViewerOpen && (
                     <ImageViewer
+                    className='py-5'
                         src={images.map(img => img.imageSrc)}
                         currentIndex={currentImage}
                         disableScroll={true}
@@ -97,7 +98,7 @@ const Gallery = ({device}) => {
                 )}
 
             </Row>
-            <Container>
+            {/* <Container>
             <Row>
                 <LinkContainer to="/gallery">
                     <Button variant="dark" size="sm" className="rounded">
@@ -105,7 +106,7 @@ const Gallery = ({device}) => {
                     </Button>
                 </LinkContainer>
             </Row>
-            </Container>
+            </Container> */}
         </Container>
     );
 };

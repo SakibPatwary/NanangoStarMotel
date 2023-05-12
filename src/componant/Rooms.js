@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { motion } from 'framer-motion'
 
 const Rooms = () => {
   return (
@@ -14,12 +15,15 @@ const Rooms = () => {
         Accomodation with Details
       </h1>
       <div className='py-2 text-start' >
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+          >
       <Card>
         <Row>
             <Col xs={12} sm={12} md={6} xl={6}>
             <Card.Img
               className='p-2 rounded-4'
-                src='./img/room/3.png'/>
+                src='./img/room/queen.jpg'/>
           </Col>
           <Col md={6} xl={6} className='p-4'>
             <Card.Title>Queen Room</Card.Title>
@@ -33,9 +37,12 @@ const Rooms = () => {
               </div>
           </Col>
           </Row>
-          </Card> 
+            </Card> </motion.div>
           </div>
       <div className='py-2'>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+          >
         <Card>
           <Row>
 
@@ -53,10 +60,10 @@ const Rooms = () => {
             <Col md={6} xl={6}>
               <Card.Img
                 className='p-2 rounded-4'
-                src='./img/room/2.png' />
+                src='./img/room/family.jpg' />
             </Col>
           </Row>
-        </Card>
+          </Card></motion.div>
       </div>
       
     </Container>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Container,Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
+import { motion } from 'framer-motion';
 
 const places = [
   {
@@ -41,6 +42,9 @@ const Place = () => {
       <Row>
         {places.map((place) => (
           <Col xs={12} md={6} lg={3} className='pb-2'>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+            >
             <Card className="text-black text-center shadow" style={{ minHeight: '380px', backgroundColor: '#d1cfcf' }}>
               <Card.Img
                 className='p-2'
@@ -48,7 +52,7 @@ const Place = () => {
                 src={place.imageSrc} />
               <Card.Title className='py-2 px-2'>{place.placeName}</Card.Title>
               <Card.Text className='px-2' style={{ textAlign: 'justify' }}>{place.placeInfo}</Card.Text>
-            </Card>
+              </Card></motion.div>
           </Col>
         ))}
       </Row>
