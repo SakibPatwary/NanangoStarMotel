@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Container,
     Col,
-    Card,
+    Card,Row,
 } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
@@ -29,28 +29,39 @@ const responsive = {
 const reviews = [
     {
         id: 1,
-        placeInfo: 'The motel was clean and comfortable, with a great location.'
+        name: 'Fiona Olsen',
+        placeInfo: 'Absolutely awesome motel. Rooms are very clean. Lovely gentleman  in reception was very welcoming. I highly recommend this motel.'
     },
     {
         id: 2,
-        placeInfo: 'We had a great stay at this motel. The staff were friendly and helpful.'
+        name: 'Neil McGuire',
+        placeInfo: 'For a small town hotel they have delivered fantastically, the beds are comfortable, the rooms are well appointed and stocked with the simple items you need.'
     },
     {
         id: 3,
-        placeInfo: 'The room was spacious and well-appointed. We enjoyed our stay.'
+        name: 'Gabrielle Cavanagh',
+        placeInfo: 'Great place in a very convenient location. Our room was very clean and hygienic. Even though we checked in late, reception staff member was friendly.'
     },
     {
         id: 4,
-        placeInfo: 'This motel exceeded our expectations. The amenities were fantastic.'
+        name: 'Wayne Davis',
+        placeInfo: 'It not a resort so lets rate it for what is is. For a small country motel Andrew does a pretty good job.'
     },
     {
         id: 5,
-        placeInfo: 'Our stay at this motel was wonderful. The bed was comfortable and the room was clean.'
+        name: 'Robbie Clarke',
+        placeInfo: 'Great value motel.  Good location at the centre of Nanago.  Very friendly manager who is doing a good job running the motel.'
     },
     {
         id: 6,
-        placeInfo: 'We were impressed by the quality of service at this motel. Highly recommended.'
+        name: 'Anita McGovern',
+        placeInfo: 'The room was very comfortable,  clean and the shower was fabulous - Nice and hot. Staff friendly and helpful we will certainly stay there again.'
     }, 
+    {
+        id: 7,
+        name: 'Mark Regan',
+        placeInfo: 'Great little motel. Friendly staff, sweet little dog named Anna is friendly too.  Clean and tidy, quiet spot. '
+    },
 ]
 
 
@@ -59,7 +70,7 @@ const Feedback = (deviceType) => {
         <Container className='pb-4'>
             <h2
                 className="text-center py-2"
-                style={{ backgroundColor: "#5A9BF1" }}
+                style={{ backgroundColor: "#5A9BF1", color: 'white', fontWeight: 'bold' }}
             >
                 CLIENTS FEEDBACK
             </h2> 
@@ -76,8 +87,20 @@ const Feedback = (deviceType) => {
             >
                 {reviews.map((review) => (
                     <Col className='px-2'>
-                        <Card className="cursorAll rounded-4" style={{ minHeight: '100px', backgroundColor: '#d1cfcf' }}>
-                            <Card.Text className='py-3 px-2 d-flex justify-content-center align-items-center' style={{textAlign:'justify'}}>{review.placeInfo}</Card.Text>
+                        <Card className="cursorAll rounded-4" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
+                            <Row>
+                                <Col xs={4} sm={4} md={4} lg={4}>
+                                   <Card.Img
+                                        className='ps-3 pt-3 d-flex'
+                                   style={{borderRadius:'50%'}}
+                                   src='./img/thumb.png'
+                                   />
+                                </Col>
+                                <Col xs={8} sm={8} md={8} lg={8}>
+                                    <Card.Title className='pt-3 pe-3' style={{fontWeight:'bold'}}>{review.name}</Card.Title>
+                                    <Card.Text as='h6' className='pb-2 pe-3' style={{ textAlign: 'justify' }}>{review.placeInfo}</Card.Text>
+                                </Col>
+                            </Row>
                         </Card>
                     </Col>
                 ))}

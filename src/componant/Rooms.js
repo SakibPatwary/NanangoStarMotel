@@ -11,6 +11,7 @@ const Rooms = () => {
     <Container className="my-4 mt-5 pt-5">
       <h1
         className="text-center pt-4"
+          style={{ fontWeight: 'bold' }}
       >
         Accomodation with Details
       </h1>

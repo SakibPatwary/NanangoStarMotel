@@ -13,7 +13,7 @@ const Topbar = () => {
         </LinkContainer>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse id="navbarScroll" style={{ fontWeight: 'bold' }}>
           <Nav className="me-auto my-2 my-lg-0 align-items-center" navbarScroll>
             <LinkContainer to="/">
               <Nav.Link>HOME</Nav.Link>
@@ -24,9 +24,9 @@ const Topbar = () => {
             <LinkContainer to="/places">
               <Nav.Link>LOCAL AREA</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/FAQ">
+            {/* <LinkContainer to="/FAQ">
               <Nav.Link>FAQ</Nav.Link>
-            </LinkContainer>
+            </LinkContainer> */}
             <LinkContainer to="/contact">
               <Nav.Link>CONTACT US</Nav.Link>
             </LinkContainer>

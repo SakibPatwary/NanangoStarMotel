@@ -59,7 +59,7 @@ const Gallery = ({device}) => {
         <Container className="my-4 pb-2">
             <h2
                 className="text-center py-2"
-                style={{ backgroundColor: "#5A9BF1" }}
+                style={{ backgroundColor: "#5A9BF1", color: 'white', fontWeight: 'bold' }}
             >
                 IMAGE GALLERY
             </h2>

@@ -86,6 +86,7 @@ const Places = () => {
             <Container className="my-4 mt-5 pt-5">
                 <h1
                     className="text-center py-2 pt-3"
+                    style={{ fontWeight: 'bold' }}
                 >
                     Popular Places in Nanango
                 </h1>
@@ -96,12 +97,12 @@ const Places = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                             >
-                                <Card className="text-black text-center" style={{ minHeight: '430px', backgroundColor: '#d1cfcf' }}>
+                                <Card className="text-black text-center pb-2" style={{ minHeight: '430px', backgroundColor: '#d1cfcf' }}>
                                     <Card.Img
                                         className='p-2'
                                         style={{ borderRadius: '15px' }}
                                         src={place.imageSrc} />
-                                    <Card.Title className='py-2 px-2'>{place.placeName}</Card.Title>
+                                    <Card.Title style={{ fontWeight: 'bold' }} className='py-2 px-2'>{place.placeName}</Card.Title>
                                     <Card.Text className='px-2' style={{ textAlign: 'justify' }}>{place.placeInfo}</Card.Text>
                                 </Card></motion.div>
                         </Col>

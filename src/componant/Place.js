@@ -35,7 +35,7 @@ const Place = () => {
     <Container className="my-4 pb-3">
       <h2
         className="text-center py-2"
-        style={{ backgroundColor: "#5A9BF1"}}
+        style={{ backgroundColor: "#5A9BF1", color: 'white', fontWeight: 'bold' }}
       >
         THINGS TO DO IN NANANGO
       </h2>
@@ -45,12 +45,12 @@ const Place = () => {
             <motion.div
               whileHover={{ scale: 1.02 }}
             >
-            <Card className="text-black text-center shadow" style={{ minHeight: '380px', backgroundColor: '#d1cfcf' }}>
+            <Card className="text-black text-center shadow pb-2" style={{ minHeight: '380px', backgroundColor: '#d1cfcf' }}>
               <Card.Img
                 className='p-2'
                 style={{ borderRadius: '15px' }}
                 src={place.imageSrc} />
-              <Card.Title className='py-2 px-2'>{place.placeName}</Card.Title>
+                <Card.Title style={{fontWeight: 'bold' }} className='py-2 px-2'>{place.placeName}</Card.Title>
               <Card.Text className='px-2' style={{ textAlign: 'justify' }}>{place.placeInfo}</Card.Text>
               </Card></motion.div>
           </Col>
@@ -60,7 +60,7 @@ const Place = () => {
       <Container>
       <Row>
         <LinkContainer to="/places">
-          <Button variant="dark" size="sm" className="rounded">
+          <Button variant="secondary" size="sm" className="rounded">
             <b>View All Popular Places</b>
           </Button>
         </LinkContainer>

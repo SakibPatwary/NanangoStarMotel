@@ -6,7 +6,7 @@ const Map = () => {
     <Container>
       <h2
         className="text-center py-2"
-        style={{ backgroundColor: "#5A9BF1"}}
+        style={{ backgroundColor: "#5A9BF1",color:'white', fontWeight: 'bold' }}
       >
         DIRECTION ON MAP
       </h2>
