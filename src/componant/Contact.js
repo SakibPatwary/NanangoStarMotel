@@ -1,9 +1,41 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container, Accordion, Row, Col, Card, Form, Button } from 'react-bootstrap'
-import { FaPhoneAlt, FaLocationArrow } from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+  const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    setIsLoading(true);
+
+    setTimeout(() => {
+
+      setIsLoading(false);
+      setIsSent(true);
+    }, 2000);
+
+    emailjs
+      .sendForm(
+        "service_ia2hlis",
+        "template_2bqei6g",
+        form.current,
+        "7AoPx5yHyJm_X2h59"
+      )
+    e.target.reset();
+  };
+
+  let buttonText = "Send Message";
+  if (isLoading) {
+    buttonText = "Sending...";
+  } else if (isSent) {
+    buttonText = "Message Sent Succenfully";
+  }
+
   return (
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -56,6 +88,7 @@ const Contact = () => {
             </Card>
           </Col>
 
+          
           <Col xs={12} sm={12} md={6} xl={6} className='p-2'>
             <h3
               className="text-center py-2"
@@ -65,7 +98,7 @@ const Contact = () => {
             </h3>
 
             <Card className='py-3' style={{ backgroundColor: '#e0e0de' }}>
-              <Form>
+              <Form ref={form} onSubmit={sendEmail}>
                 <Row className="mb-3 px-3" >
                   <Form.Group controlId="validationCustom01">
                     <Form.Label>Name</Form.Label>
@@ -73,8 +106,9 @@ const Contact = () => {
                       required
                       type="text"
                       placeholder="Your Name"
+                      name="name" 
+                      id="name"
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                   </Form.Group>
                 </Row>
                 <Row className="mb-3 px-3" >
@@ -82,10 +116,11 @@ const Contact = () => {
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       required
-                      type="text"
+                      type="email"
                       placeholder="Your Email Address"
+                      name="email" 
+                      id="email"
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                   </Form.Group>
                 </Row>
                 <Row className="mb-3 px-3" >
@@ -95,12 +130,12 @@ const Contact = () => {
                       required
                       as="textarea"
                       placeholder="Your Message or Question"
+                      id="message"
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                   </Form.Group>
                 </Row>
                 <div className='text-center'>
-                  <Button className="mx-auto m-1" variant="danger">Send Message</Button>
+                  <Button type="submit" disabled={isLoading || isSent} value="send" id="form_button" className="mx-auto m-1" variant="danger">{buttonText}</Button>
                 </div>
               </Form>
             </Card>

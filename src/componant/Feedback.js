@@ -2,9 +2,10 @@ import React from 'react'
 import {
     Container,
     Col,
-    Card,Row,
+    Card, Row, Button
 } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
+import { LinkContainer } from "react-router-bootstrap";
 import Carousel from "react-multi-carousel";
 
 
@@ -56,7 +57,7 @@ const reviews = [
         id: 6,
         name: 'Anita McGovern',
         placeInfo: 'The room was very comfortable,  clean and the shower was fabulous - Nice and hot. Staff friendly and helpful we will certainly stay there again.'
-    }, 
+    },
     {
         id: 7,
         name: 'Mark Regan',
@@ -73,7 +74,7 @@ const Feedback = (deviceType) => {
                 style={{ backgroundColor: "#5A9BF1", color: 'white', fontWeight: 'bold' }}
             >
                 CLIENTS FEEDBACK
-            </h2> 
+            </h2>
 
             <Carousel
                 responsive={responsive}
@@ -90,14 +91,14 @@ const Feedback = (deviceType) => {
                         <Card className="cursorAll rounded-4" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
                             <Row>
                                 <Col xs={4} sm={4} md={4} lg={4}>
-                                   <Card.Img
+                                    <Card.Img
                                         className='ps-3 pt-3 d-flex'
-                                   style={{borderRadius:'50%'}}
-                                   src='./img/thumb.png'
-                                   />
+                                        style={{ borderRadius: '50%' }}
+                                        src='./img/thumb.png'
+                                    />
                                 </Col>
                                 <Col xs={8} sm={8} md={8} lg={8}>
-                                    <Card.Title className='pt-3 pe-3' style={{fontWeight:'bold'}}>{review.name}</Card.Title>
+                                    <Card.Title className='pt-3 pe-3' style={{ fontWeight: 'bold' }}>{review.name}</Card.Title>
                                     <Card.Text as='h6' className='pb-2 pe-3' style={{ textAlign: 'justify' }}>{review.placeInfo}</Card.Text>
                                 </Col>
                             </Row>
