@@ -21,12 +21,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_ia2hlis",
-        "template_2bqei6g",
+        "service_gfmwuks",
+        "template_vgis21i",
         form.current,
         "7AoPx5yHyJm_X2h59"
       )
+
     e.target.reset();
+
+      
   };
 
   let buttonText = "Send Message";
@@ -131,6 +134,7 @@ const Contact = () => {
                       as="textarea"
                       placeholder="Your Message or Question"
                       id="message"
+                      name="message" 
                     />
                   </Form.Group>
                 </Row>
