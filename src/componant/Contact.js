@@ -21,15 +21,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_gfmwuks",
-        "template_vgis21i",
+        "service_hv8bpho",
+        "template_vdmr1id",
         form.current,
-        "7AoPx5yHyJm_X2h59"
+        "jFmyDNMa_ZU1wWpFg"
       )
 
     e.target.reset();
 
-      
+
   };
 
   let buttonText = "Send Message";
@@ -55,20 +55,20 @@ const Contact = () => {
             </h3>
             <Card >
 
-              <Card className='m-2 text-center' style={{ backgroundColor:'#e0e0de'}}>
-                <Card.Body>
-                    <Row>
-                    <Col> 
-                      <Card.Title style={{ fontWeight: 'bold' }}>PHONE</Card.Title>
-                      <Card.Title as='h5'>(07) 4163 1666</Card.Title></Col>
-                   </Row>
-                  
-                  </Card.Body>
-                </Card>
               <Card className='m-2 text-center' style={{ backgroundColor: '#e0e0de' }}>
                 <Card.Body>
                   <Row>
-                    <Col> 
+                    <Col>
+                      <Card.Title style={{ fontWeight: 'bold' }}>PHONE</Card.Title>
+                      <Card.Title as='h5'>(07) 4163 1666</Card.Title></Col>
+                  </Row>
+
+                </Card.Body>
+              </Card>
+              <Card className='m-2 text-center' style={{ backgroundColor: '#e0e0de' }}>
+                <Card.Body>
+                  <Row>
+                    <Col>
                       <Card.Title style={{ fontWeight: 'bold' }}>EMAIL</Card.Title>
                       <Card.Title as='h5'>nanangostar@gmail.com</Card.Title></Col>
                   </Row>
@@ -79,19 +79,19 @@ const Contact = () => {
               <Card className='m-2 text-center' style={{ backgroundColor: '#e0e0de' }}>
                 <Card.Body>
                   <Row>
-                    <Col> 
+                    <Col>
                       <Card.Title style={{ fontWeight: 'bold' }}>ADDRESS</Card.Title>
                       <Card.Title>43 Drayton Street, Nanango, QLD <br />4615 Australia</Card.Title></Col>
                   </Row>
 
                 </Card.Body>
               </Card>
-          
-          
+
+
             </Card>
           </Col>
 
-          
+
           <Col xs={12} sm={12} md={6} xl={6} className='p-2'>
             <h3
               className="text-center py-2"
@@ -109,7 +109,7 @@ const Contact = () => {
                       required
                       type="text"
                       placeholder="Your Name"
-                      name="name" 
+                      name="name"
                       id="name"
                     />
                   </Form.Group>
@@ -121,7 +121,7 @@ const Contact = () => {
                       required
                       type="email"
                       placeholder="Your Email Address"
-                      name="email" 
+                      name="email"
                       id="email"
                     />
                   </Form.Group>
@@ -134,7 +134,7 @@ const Contact = () => {
                       as="textarea"
                       placeholder="Your Message or Question"
                       id="message"
-                      name="message" 
+                      name="message"
                     />
                   </Form.Group>
                 </Row>
