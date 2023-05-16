@@ -29,7 +29,7 @@ const Rooms = () => {
           <Col md={6} xl={6} className='p-4'>
             <Card.Title>Queen Room</Card.Title>
               <Card.Text>Queen Beds with private bathroom and toilet. Free parking in front of the room and WIFI.</Card.Text>
-              <Card.Text>✅Air-conditioning ✅WiFi ✅Cable television ✅Hairdryer ✅Microwave</Card.Text>
+              <Card.Text>✅Air-conditioning ✅WiFi ✅Hairdryer ✅Microwave</Card.Text>
               
               <div>
                 <a href="https://hotels.cloudbeds.com/reservation/spR72T" target="_blank" rel="noopener noreferrer">

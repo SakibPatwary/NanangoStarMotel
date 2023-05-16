@@ -24,9 +24,9 @@ const Topbar = () => {
             <LinkContainer to="/places">
               <Nav.Link>LOCAL AREA</Nav.Link>
             </LinkContainer>
-            {/* <LinkContainer to="/FAQ">
+            <LinkContainer to="/FAQ">
               <Nav.Link>FAQ</Nav.Link>
-            </LinkContainer> */}
+            </LinkContainer>
             <LinkContainer to="/contact">
               <Nav.Link>CONTACT US</Nav.Link>
             </LinkContainer>

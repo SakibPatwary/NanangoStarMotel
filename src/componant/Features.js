@@ -40,9 +40,9 @@ const Features = () => {
                         whileHover={{ scale: 1.02 }}
                     >
                     <Card className="py-4 px-2 text-center" style={{ minHeight: '180px', backgroundColor: '#d1cfcf' }}>
-                            <Card.Title style={{ fontWeight: 'bold' }}>24-Hour Reception</Card.Title>
+                            <Card.Title style={{ fontWeight: 'bold' }}>24 Hours Manager on-site</Card.Title>
                         <Card.Text style={{ textAlign: 'justify' }}>
-                                The motel has a 24-hour reception desk, allowing guests to check in or check out at any time of the day or night.
+                                The motel has manager on-site 24/7 to assist guest with chech-in and all other services. Reception desk is open from 8AM till 8PM and after hours assistance by calling the motel number.
                             </Card.Text>
                         </Card></motion.div>
                 </Col>

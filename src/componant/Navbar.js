@@ -14,10 +14,10 @@ const Navbar = () => {
     <Container>
       <div
         style={{
-          minHeight: '75vh',
-          backgroundImage: 'url("./img/navbar.jpg")',
+          minHeight: '85vh',
+          backgroundImage: 'url("./img/navbar.png")',
           backgroundSize: "cover",
-          backgroundPosition: 'right',
+          backgroundPosition: 'center',
         }}
         className='d-flex justify-content-center align-items-end pb-5'
       >
