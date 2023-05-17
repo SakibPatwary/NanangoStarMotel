@@ -76,56 +76,7 @@ const Faq = () => {
                   </Accordion>
                    </Card>
                   </Col>
-                 
-              {/* <Col xs={12} sm={12} md={6} xl={5}>
-                  <h3
-                      className="text-center py-2"
-                      style={{ backgroundColor: "grey", color: "white" }}
-                  >
-                      Want to Ask Something?
-                  </h3>
-
-                  <Card className='py-3'>
-                    <Form>
-                          <Row className="mb-3 px-3" >
-                              <Form.Group controlId="validationCustom01">
-                                  <Form.Label>Name</Form.Label>
-                                  <Form.Control
-                                      required
-                                      type="text"
-                                      placeholder="Your Name"
-                                  />
-                                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                              </Form.Group>
-                          </Row>
-                          <Row className="mb-3 px-3" >
-                              <Form.Group controlId="validationCustom01">
-                                  <Form.Label>Email</Form.Label>
-                                  <Form.Control
-                                      required
-                                      type="text"
-                                      placeholder="Your Email Address"
-                                  />
-                                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                              </Form.Group>
-                          </Row>
-                          <Row className="mb-3 px-3" >
-                              <Form.Group controlId="validationCustom01">
-                                  <Form.Label>Message/ Question</Form.Label>
-                                  <Form.Control
-                                      required
-                                      as="textarea"
-                                      placeholder="Your Message or Question"
-                                  />
-                                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                              </Form.Group>
-                          </Row>
-                          <div className='text-center'>
-                          <Button className="mx-auto" variant="danger">Book Now</Button>
-                          </div>
-                          </Form>
-                  </Card>
-              </Col> */}
+                
         </Row>
     </Container>
   )

@@ -45,21 +45,16 @@ const reviews = [
     },
     {
         id: 4,
-        name: 'Wayne Davis',
-        placeInfo: 'It not a resort so lets rate it for what is is. For a small country motel Andrew does a pretty good job.'
-    },
-    {
-        id: 5,
         name: 'Robbie Clarke',
         placeInfo: 'Great value motel.  Good location at the centre of Nanago.  Very friendly manager who is doing a good job running the motel.'
     },
     {
-        id: 6,
+        id: 5,
         name: 'Anita McGovern',
         placeInfo: 'The room was very comfortable,  clean and the shower was fabulous - Nice and hot. Staff friendly and helpful we will certainly stay there again.'
     },
     {
-        id: 7,
+        id: 6,
         name: 'Mark Regan',
         placeInfo: 'Great little motel. Friendly staff, sweet little dog named Anna is friendly too.  Clean and tidy, quiet spot. '
     },

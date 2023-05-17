@@ -13,7 +13,6 @@ const Home = () => {
 
       <Navbar />
       <Features />
-      {/* <Services/> */}
       <Place />
       <Gallery />
       <Feedback />
